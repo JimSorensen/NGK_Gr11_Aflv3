@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using NGK_G11_Aflv3.Infrastructure;
 using NGK_G11_Aflv3.Models;
 
-namespace schopingCart.Controllers
+namespace NGK_G11_Aflv3.Controllers
 {
     public class PagesController : Controller
     {

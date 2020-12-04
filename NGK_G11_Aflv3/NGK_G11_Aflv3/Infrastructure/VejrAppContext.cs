@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using NGK_G11_Aflv3.Models;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NGK_G11_Aflv3.Infrastructure
 {
-	public class VejrAppContext : DbContext
+	public class VejrAppContext : IdentityDbContext<AppUser>
 	{
 		public VejrAppContext(DbContextOptions<VejrAppContext> options)
 			:base(options)
