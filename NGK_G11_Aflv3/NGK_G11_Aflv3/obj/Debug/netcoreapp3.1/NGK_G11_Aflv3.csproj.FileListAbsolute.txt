@@ -290,3 +290,15 @@ C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3
 C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\NGK_G11_Aflv3.dll
 C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\NGK_G11_Aflv3.pdb
 C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\NGK_G11_Aflv3.genruntimeconfig.cache
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Pages\Index.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Pages\Details.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Pages\Create.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_NotificationPartial.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Pages\Edit.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\MainMenu\Default.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Views\Pages\Page.cshtml.g.cs

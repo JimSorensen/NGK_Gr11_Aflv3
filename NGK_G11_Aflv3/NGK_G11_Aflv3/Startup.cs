@@ -54,13 +54,20 @@ namespace NGK_G11_Aflv3
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllerRoute(
-				   name: "areas",
-				   pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+					"Pages",
+					"{slug?}",
+					defaults: new { controller = "Pages", action = "Page" }
+			  );
 
+				endpoints.MapControllerRoute(
+				   name: "areas",
+				   pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+				   );
 
 				endpoints.MapControllerRoute(
 					name: "default",
-					pattern: "{controller=Home}/{action=Index}/{id?}");
+					pattern: "{controller=Home}/{action=Index}/{id?}"
+					);
 			});
 		}
 	}

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-
+using NGK_G11_Aflv3.Models;
 
 namespace NGK_G11_Aflv3
 {
@@ -15,8 +15,23 @@ namespace NGK_G11_Aflv3
     {
         public static void Main(string[] args)
         {
-           CreateHostBuilder(args).Build();
-           
+           var host = CreateHostBuilder(args).Build();
+
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                try
+                {
+                    SeedData.Initialize(services);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
