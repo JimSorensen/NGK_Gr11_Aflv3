@@ -14,28 +14,24 @@ namespace NGK_G11_Aflv3.Controllers
 	{
 		private readonly UserManager<AppUser> userManager;
 		private readonly SignInManager<AppUser> signInManager;
-		private IPasswordHasher<AppUser> passwordHasher;
 
-		public AccountController(UserManager<AppUser> userManager,
-							   SignInManager<AppUser> signInManager,
-							  IPasswordHasher<AppUser> passwordHasher)
+		public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
 		{
 			this.userManager = userManager;
 			this.signInManager = signInManager;
-			this.passwordHasher = passwordHasher;
 		}
 
 		// GET /account/Register
 		[AllowAnonymous]
 		public IActionResult Register() => View();
 
+
 		// Post /account/Register
 		[HttpPost]
 		[AllowAnonymous]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Register(AppUser user)
+		public async Task<IActionResult> Register(User user)
 		{
-
 			if (ModelState.IsValid)
 			{
 				AppUser appUser = new AppUser
@@ -45,7 +41,6 @@ namespace NGK_G11_Aflv3.Controllers
 				};
 
 				IdentityResult result = await userManager.CreateAsync(appUser, user.Password);
-
 				if (result.Succeeded)
 				{
 					return RedirectToAction("Login");
@@ -59,6 +54,45 @@ namespace NGK_G11_Aflv3.Controllers
 				}
 			}
 			return View(user);
-		}		
+		}
+
+		// GET /account/Login
+		[AllowAnonymous]
+		public IActionResult Login(string returnUrl)
+		{
+			Login login = new Login
+			{
+				ReturnUrl = returnUrl
+			};
+			return View(login);
+		}
+
+		// Post /account/login
+		[HttpPost]
+		[AllowAnonymous]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> Login(Login login)
+		{
+			if (ModelState.IsValid)
+			{
+				AppUser appUser = await userManager.FindByEmailAsync(login.Email);
+				if (appUser != null)
+				{
+					Microsoft.AspNetCore.Identity.SignInResult result = await signInManager.PasswordSignInAsync
+						(appUser, login.Password, false, false);
+					if (result.Succeeded)
+						return Redirect(login.ReturnUrl ?? "/");
+				}
+				ModelState.AddModelError("", " Login failed, wrong credentials");
+			}
+			return View(login);
+		}
+
+		// GET /account/Logout
+		public async Task<IActionResult> Logout()
+		{
+			await signInManager.SignOutAsync();
+			return Redirect("/");
+		}
 	}
 }

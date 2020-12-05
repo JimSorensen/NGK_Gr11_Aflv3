@@ -27,6 +27,13 @@ namespace NGK_G11_Aflv3
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddMemoryCache();
+			services.AddSession(options =>
+			{
+				//options.IdleTimeout = TimeSpan.FromSeconds(2);
+				//options.IdleTimeout = TimeSpan.FromDays(2);
+			});
+
 			services.AddControllersWithViews();
 
 			services.AddDbContext<VejrAppContext>(options => options.UseSqlServer
@@ -61,8 +68,8 @@ namespace NGK_G11_Aflv3
 			app.UseStaticFiles();
 
 			app.UseRouting();
+			app.UseSession();
 
-			
 			app.UseAuthentication();
 			app.UseAuthorization();
 
