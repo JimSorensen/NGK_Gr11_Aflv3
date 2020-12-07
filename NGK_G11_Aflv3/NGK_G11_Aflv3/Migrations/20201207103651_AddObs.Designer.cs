@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NGK_G11_Aflv3.Infrastructure;
 
 namespace NGK_G11_Aflv3.Migrations
 {
     [DbContext(typeof(VejrAppContext))]
-    partial class VejrAppContextModelSnapshot : ModelSnapshot
+    [Migration("20201207103651_AddObs")]
+    partial class AddObs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -218,73 +220,6 @@ namespace NGK_G11_Aflv3.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("NGK_G11_Aflv3.Models.Locations", b =>
-                {
-                    b.Property<int>("LocationsId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Sorting")
-                        .HasColumnType("int");
-
-                    b.HasKey("LocationsId");
-
-                    b.ToTable("Locations");
-                });
-
-            modelBuilder.Entity("NGK_G11_Aflv3.Models.Observations", b =>
-                {
-                    b.Property<int>("ObservationsId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<float>("AirPressure")
-                        .HasColumnType("real");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Humidity")
-                        .HasColumnType("int");
-
-                    b.Property<float>("Latitude")
-                        .HasColumnType("real");
-
-                    b.Property<int?>("LocationsId")
-                        .HasColumnType("int");
-
-                    b.Property<float>("Longitude")
-                        .HasColumnType("real");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Slug")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Sorting")
-                        .HasColumnType("int");
-
-                    b.Property<float>("Temperature")
-                        .HasColumnType("real");
-
-                    b.Property<DateTime>("Time")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("ObservationsId");
-
-                    b.HasIndex("LocationsId");
-
-                    b.ToTable("Observations");
-                });
-
             modelBuilder.Entity("NGK_G11_Aflv3.Models.Page", b =>
                 {
                     b.Property<int>("Id")
@@ -360,13 +295,6 @@ namespace NGK_G11_Aflv3.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("NGK_G11_Aflv3.Models.Observations", b =>
-                {
-                    b.HasOne("NGK_G11_Aflv3.Models.Locations", "Location")
-                        .WithMany("Observations")
-                        .HasForeignKey("LocationsId");
                 });
 #pragma warning restore 612, 618
         }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NGK_G11_Aflv3.Infrastructure;
 
 namespace NGK_G11_Aflv3.Migrations
 {
     [DbContext(typeof(VejrAppContext))]
-    partial class VejrAppContextModelSnapshot : ModelSnapshot
+    [Migration("20201207154052_AddObsSorting3")]
+    partial class AddObsSorting3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

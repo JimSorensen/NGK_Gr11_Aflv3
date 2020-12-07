@@ -309,3 +309,6 @@ C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3
 C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Views\Observations\Index.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Views\Observations\Create.cshtml.g.cs
+C:\Users\Jim\source\repos\NGK_OPgaver\NGK_Gr11_Aflv3\NGK_G11_Aflv3\NGK_G11_Aflv3\obj\Debug\netcoreapp3.1\Razor\Views\Observations\Details.cshtml.g.cs

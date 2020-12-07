@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NGK_G11_Aflv3.Infrastructure;
 
 namespace NGK_G11_Aflv3.Migrations
 {
     [DbContext(typeof(VejrAppContext))]
-    partial class VejrAppContextModelSnapshot : ModelSnapshot
+    [Migration("20201207120004_AddObsSorting")]
+    partial class AddObsSorting
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -225,6 +227,12 @@ namespace NGK_G11_Aflv3.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<float>("Latitude")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Longitude")
+                        .HasColumnType("real");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -254,22 +262,7 @@ namespace NGK_G11_Aflv3.Migrations
                     b.Property<int>("Humidity")
                         .HasColumnType("int");
 
-                    b.Property<float>("Latitude")
-                        .HasColumnType("real");
-
                     b.Property<int?>("LocationsId")
-                        .HasColumnType("int");
-
-                    b.Property<float>("Longitude")
-                        .HasColumnType("real");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Slug")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Sorting")
                         .HasColumnType("int");
 
                     b.Property<float>("Temperature")

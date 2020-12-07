@@ -15,5 +15,7 @@ namespace NGK_G11_Aflv3.Infrastructure
 		{
 		}
 		public DbSet<Page> Pages { get; set; }		
+		public DbSet<Observations> Observations { get; set; }		
+		public DbSet<Locations> Locations { get; set; }
 	}
 }
